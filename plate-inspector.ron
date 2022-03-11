@@ -1,0 +1,20 @@
+ImageConfig(
+    // The regex for the image file names
+    image_regex: r"_(?P<well>[A-P]\d{2})_(?P<site>s[1-9])_(?P<channel>w[1-5])",
+
+    // the target sizes in pixels of each microscope image in the overview
+    // The final size of the overview image is then:
+    // 24 * target_size_x * num_sites_x  BY  16 * target_size_y * num_sites_y
+    target_size_x: 108,
+    target_size_y: 108,
+
+    // the number of microscope sites per well in X and Y
+    num_sites_x: 3,
+    num_sites_y: 3,
+
+    // the program performs a contrast stretch to improve contrast
+    // set the cutoff_high to lower values to get higher contrast
+    intensity_cutoff_low: 5,
+    intensity_cutoff_high: 200,
+    intensity_addition: 10
+)
