@@ -1,5 +1,8 @@
 ImageConfig(
     // The regex for the image file names
+    // Matches e.g. the following image file name:
+    // "180706_A01_s5_w1B9D0B234-C57E-4A13-9664-D2CA89B4E7F8.tif"
+    // to well: "A01", site: "5", channel: "1"
     image_regex: r"_(?P<well>[A-P]\d{2})_(?P<site>s[1-9])_(?P<channel>w[1-5])",
 
     // the target sizes in pixels of each microscope image in the overview
