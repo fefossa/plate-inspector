@@ -29,7 +29,7 @@ $ plate-inspector -h
 
 Plate inspector, A visual inspector of Cell Painting plates.
 Creates a single image overview of all individual images for the given channel.
-v 0.3.1 (2022-03-09T16:34:09Z), by Axel Pahl. Written in Rust.
+v 0.3.2 (2022-03-11T15:35:56Z), by Axel Pahl. Written in Rust.
 
 Configuration files in the `RON` format can be put
 at <UserConfigDir>/plate-inspector.ron
@@ -37,9 +37,9 @@ or passed at the command line with the `-c` flag.
 An example config file can be found at the root of this project.
 If no config file is found, a default configuration is used.
 
-Usage: target/release/plate-inspector IMAGE_DIR -w CHANNEL [-c CONFIG_FILE] [-o OUTPUT_FILE]
+Usage: plate-inspector IMAGE_DIR -w CHANNEL [-c CONFIG_FILE] [-o OUTPUT_FILE]
 
-Example: target/release/plate-inspector queue/C2021-04-10.00-211126-A -w1 -o C2021-04-10.00-211126-A_w1.png
+Example: plate-inspector queue/C2021-04-10.00-211126-A -w1 -o C2021-04-10.00-211126-A_w1.png
 
 Options:
     -h, --help          print this help menu
