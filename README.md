@@ -2,7 +2,7 @@
 
 This tool generates a visual overview of the images of a Cell Painting plate for quick quality assessment.
 
-The generated image  gives an overview of the whole plate (scaled down, original size ~20MB per image with the default configuration):  
+The generated image  gives an overview of the whole plate (the image shown here is scaled down, the original size is ~20MB per generated overview image with the default configuration):  
 ![full_overview](assets/example_overview_w1.png)
 
 The Well Id is written in the top left corner of each well:  
@@ -14,7 +14,7 @@ Plate inspector expects a 384 well format and TIFF images. Well Ids (A01, C12, .
 
 `"180706_A01_s5_w1B9D0B234-C57E-4A13-9664-D2CA89B4E7F8.tif"`
 
-can be matched by this reges:
+can be matched by this regex:
 
 `"_(?P<well>[A-P]\d{2})_(?P<site>s[1-9])_(?P<channel>w[1-5])"`
 

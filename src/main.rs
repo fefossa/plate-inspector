@@ -1,5 +1,4 @@
 #![feature(let_else)]
-// rsync_cp --exclude='.git' --exclude='target' plate-inspector clem:dev/rust/
 
 use anyhow::{anyhow, Result};
 use colored::Colorize;
