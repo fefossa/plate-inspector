@@ -117,7 +117,7 @@ fn write_overview_image(conf: &AppConfig) {
     let img_width_out: u32 = target_size_x * 24 * num_sites_x; // 3x3 = 9 sites
     let img_height_out: u32 = target_size_y * 16 * num_sites_y; // 3x3 = 9 sites
 
-    // Load for image watermarking
+    // Load font for image watermarking
     let font = Vec::from(include_bytes!("../assets/DejaVuSans.ttf") as &[u8]);
     let font = Font::try_from_vec(font).unwrap();
 
