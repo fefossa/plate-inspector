@@ -1,5 +1,3 @@
-#![feature(let_else)]
-
 use anyhow::{anyhow, Result};
 use colored::Colorize;
 use getopts::Options;
@@ -152,7 +150,14 @@ fn write_overview_image(conf: &AppConfig) {
             }
         };
 
-        let img = image::open(img_path).unwrap().into_luma8();
+        let img = match image::open(img_path.clone()) {
+            Ok(img) => img.into_luma8(),
+            Err(_) => {
+                eprintln!("{}: {} {}", "Failed to load image".red(), img_path_str.red(), "replacing with blank image".yellow());
+                // Create a blank image with the target size (black or white as needed)
+                GrayImage::new(target_size_x, target_size_y)
+            }
+        };
 
         let img_resized = resize(&img, target_size_x, target_size_y, FilterType::Nearest);
 
